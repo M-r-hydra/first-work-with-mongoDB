@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { saveRandomProduct } from "./Models/productsModel";
+import { saveCustomProduct } from "./Models/productsModel";
 
 mongoose.set("strictQuery", true);
 
@@ -11,3 +11,5 @@ mongoose
   .catch(() => {
     console.log("no connected !");
   });
+
+saveCustomProduct("product1 ", 200);
