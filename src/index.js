@@ -4,7 +4,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importDefault(require("mongoose"));
-const productsModel_1 = require("./Models/productsModel");
 mongoose_1.default.set("strictQuery", true);
 mongoose_1.default
     .connect("mongodb://127.0.0.1:27017/testDB")
@@ -14,6 +13,3 @@ mongoose_1.default
     .catch(() => {
     console.log("no connected !");
 });
-setInterval(() => {
-    (0, productsModel_1.saveRandomProduct)();
-}, 0.00001);

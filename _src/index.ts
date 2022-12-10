@@ -11,7 +11,3 @@ mongoose
   .catch(() => {
     console.log("no connected !");
   });
-
-setInterval(() => {
-  saveRandomProduct();
-}, 0.00001);
